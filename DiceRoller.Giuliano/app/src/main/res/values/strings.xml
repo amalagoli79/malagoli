@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Rolar Dados</string>
-    <string name="roll">Jogar</string>
+    <string name="app_name">Previsâo do Tempo</string>
+    <string name="roll">Seu dia Vai Ser?</string>
 </resources>

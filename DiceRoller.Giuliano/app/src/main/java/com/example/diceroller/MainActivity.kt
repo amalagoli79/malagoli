@@ -17,40 +17,37 @@ class MainActivity : AppCompatActivity() {
         //setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        RoolDiceAnimated()
+        //RoolDiceAnimated()
         binding.button.setOnClickListener { RandomDice() }
     }
 
     fun RandomDice() {
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
-            RoolDiceAnimated()
-            val toast = Toast.makeText(this, "Dados Rolando!", Toast.LENGTH_SHORT)
+            //RoolDiceAnimated()
+            val toast = Toast.makeText(this, "Que lindo!", Toast.LENGTH_SHORT)
             toast.show()
         }, 2000)
 
         // var txtView =  binding.textView
 
-        var diceReturn = Dice(6).roll()
+        var diceReturn = Dice(3).roll()
 
         var diceImage = binding.imageView
 
         when (diceReturn) {
-            1 -> diceImage.setImageResource(R.drawable.dice_1)
-            2 -> diceImage.setImageResource(R.drawable.dice_2)
-            3 -> diceImage.setImageResource(R.drawable.dice_3)
-            4 -> diceImage.setImageResource(R.drawable.dice_4)
-            5 -> diceImage.setImageResource(R.drawable.dice_5)
-            6 -> diceImage.setImageResource(R.drawable.dice_6)
+            1 -> diceImage.setImageResource(R.drawable.sol)
+            2 -> diceImage.setImageResource(R.drawable.chuva)
+            3 -> diceImage.setImageResource(R.drawable.furacao)
         }
         // txtView.setText("$diceReturn")
 
     }
 
-    fun RoolDiceAnimated() {
-        var diceImage = binding.imageView
-        Glide.with(this).load(R.drawable.dice).into(diceImage)
-    }
+    //fun RoolDiceAnimated() {
+    //    var diceImage = binding.imageView
+    //    Glide.with(this).load(R.drawable.dice).into(diceImage)
+    //}
 
     class Dice(var numSides: Int) {
         fun roll(): Int {
