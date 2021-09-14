@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
             //RoolDiceAnimated()
+
             val toast = Toast.makeText(this, "Que lindo!", Toast.LENGTH_SHORT)
             toast.show()
         }, 2000)
